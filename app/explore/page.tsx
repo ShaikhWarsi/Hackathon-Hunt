@@ -69,7 +69,7 @@ export default function ExplorePage() {
     if (filters.minPrize !== undefined) {
       result = result.filter((h) => {
         if (h.prizeText === null) return false;
-        const cleanPrizeText = h.prizeText.replace(/<[^>]*>?/gm, "")
+        const cleanPrizeText = h.prizeText.replace(/<[^>]*>?/gm, "").replace(/</g, "&lt;").replace(/>/g, "&gt;")
         const prize = Number.parseInt(cleanPrizeText.replace(/\D/g, "")) || 0
         return prize >= filters.minPrize!
       })
@@ -77,7 +77,7 @@ export default function ExplorePage() {
     if (filters.maxPrize !== undefined) {
       result = result.filter((h) => {
         if (h.prizeText === null) return false;
-        const cleanPrizeText = h.prizeText.replace(/<[^>]*>?/gm, "")
+        const cleanPrizeText = h.prizeText.replace(/<[^>]*>?/gm, "").replace(/</g, "&lt;").replace(/>/g, "&gt;")
         const prize = Number.parseInt(cleanPrizeText.replace(/\D/g, "")) || 0
         return prize <= filters.maxPrize!
       })

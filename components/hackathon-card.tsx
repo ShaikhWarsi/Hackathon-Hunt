@@ -209,7 +209,7 @@ interface HackathonCardProps {
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Trophy className="size-4 shrink-0" />
                   <span className="truncate">
-                    {hackathon.prizeText.replace(/<[^>]*>?/gm, "")}
+                    {hackathon.prizeText.replace(/<[^>]*>?/gm, "").replace(/</g, "&lt;").replace(/>/g, "&gt;")}
                   </span>
                 </div>
               ) : (
