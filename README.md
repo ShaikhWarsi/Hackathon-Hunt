@@ -16,8 +16,8 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ShaikhWarsi/Hackathon-Hunt
-   cd open-hackathons-api-master
+   git clone https://github.com/ShaikhWarsi/HackathonHunt
+   cd HackathonHunt
    ```
 
 2. Navigate to the frontend directory and install dependencies:
