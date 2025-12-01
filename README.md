@@ -1,4 +1,4 @@
-# Open Hackathons API Master
+#HackathonHunt
 
 This project is a platform for managing and participating in hackathons. It includes a Next.js frontend application.
 
